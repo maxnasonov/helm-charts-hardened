@@ -17,6 +17,7 @@
 {{- define "spiffe-oidc-discovery-provider.yaml-config" -}}
 {{- $oidcSocket := .oidcSocket }}
 {{- with .root }}
+set_key_use: true
 log_level: {{ .Values.config.logLevel | quote }}
 
 domains:
